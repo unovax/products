@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id('id');
+            $table->id();
             $table->string('name');
             $table->string('lastname');
             $table->string('email')->unique();
@@ -33,6 +33,5 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
-        Schema::insert('insert into users (id, name, email, password) values (?, ?, ?, ?)', [0,'Administrador','admin@gmail.com','123456789']);
     }
 }
