@@ -39,7 +39,7 @@ class CarritoController extends Controller
   {
         $client_id = Client::where('user_id', $request->client_id)->get();
         $new = new Order;
-        $new->client_id = $client_id[0]->id;
+        $new->client_id = $client_id[0]->client_id;
         $new->product_id = $request->product_id;
         $new->quantity = 1;
         $new->status = False;
