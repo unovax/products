@@ -25,7 +25,7 @@ class CarritoController extends Controller
 
     $client = Client::where('user_id', Auth::user()->id)->get();
 
-    $order = Order::where('client_id', $client[0]->id)->get();
+    $order = Order::where('client_id', $client[0]->client_id)->get();
 
     $products = Product::all();
 
