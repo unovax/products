@@ -26,7 +26,7 @@
     <tbody>
 
       <?php foreach ($orders as $key => $order): ?>
-        <?php if ($client['id'] == $order['client_id']): ?>
+        <?php if ($client['client_id'] == $order['client_id']): ?>
 
           <?php foreach ($products as $key => $prd): ?>
             <?php if ($prd['product_id'] == $order['product_id']): ?>
